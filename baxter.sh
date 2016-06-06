@@ -6,3 +6,4 @@ rosrun baxter_tools enable_robot.py -e
 ./xdisplay_image.py -f face.png
  rosrun baxter_examples xdisplay_image.py -f=face.png
 rosrun baxter_examples joint_position_file_playback.py -f pose.txt -l 0
+./baxter_ridgeback.py
