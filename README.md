@@ -11,4 +11,4 @@ Ballroom dancing demo with the Ridgeback and Baxter robots.
 7. execute `rosrun baxter_examples joint_position_file_playback.py -f pose.txt -l 0`
 8. start new screen windows (`Ctrl+a then c`), do steps 3. 4., then execute `./baxter_ridgeback.py`
 9. you can now drive Ridgeback normally by holding down (L1), or let ballroom work by holding down (X)
-10. After demo, kill everything in every windows (`Ctrl+c). To tuck arms after demo for packing, on the ssh session with Baxter, execute `rosrun baxter_tools tuck_arms.py -t`
+10. After demo, kill everything in every windows (`Ctrl+c`). To tuck arms after demo for packing, on the ssh session with Baxter, execute `rosrun baxter_tools tuck_arms.py -t`
