@@ -4,7 +4,7 @@ import roslib
 import rospy
 from sensor_msgs.msg import JointState
 from geometry_msgs.msg import Twist
-from baxter_core_msgs.msg import HeadPanCommand
+#from baxter_core_msgs.msg import HeadPanCommand
 from std_msgs.msg import Bool
 from sensor_msgs.msg import Joy
 
@@ -72,10 +72,10 @@ def ballroom():
     pub_vel = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
     cmd = Twist()
     #Publish head commands to Baxter
-    pub_head_pan = rospy.Publisher('/robot/head/command_head_pan', HeadPanCommand, queue_size=1)
-    pub_head_nod = rospy.Publisher('/robot/head/command_head_nod', Bool, queue_size=1)
-    pan = HeadPanCommand()
-    pan.speed = 100 
+    #pub_head_pan = rospy.Publisher('/robot/head/command_head_pan', HeadPanCommand, queue_size=1)
+    #pub_head_nod = rospy.Publisher('/robot/head/command_head_nod', Bool, queue_size=1)
+   # pan = HeadPanCommand()
+    #pan.speed = 100 
 
     rate = rospy.Rate(10) # 10hz
 
@@ -102,8 +102,8 @@ def ballroom():
         pub_vel.publish(cmd)
 	print cmd
 
-        pan.target = cmd.angular.z*2
-        pub_head_pan.publish(pan)
+        #pan.target = cmd.angular.z*2
+        #pub_head_pan.publish(pan)
         #pub_head_nod.publish(1)
 
 
